@@ -1,0 +1,5 @@
+host = "192.168.1.10"
+user = "pi"
+password = "78P@55word"
+reboot_command = "reboot"
+ping_failed = "1 packets transmitted, 0 packets received, 100.0% packet loss"
