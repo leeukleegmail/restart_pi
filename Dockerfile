@@ -11,6 +11,9 @@ RUN apk add gcc \
 ARG container_name
 ENV CONTAINER_NAME $container_name
 
+ARG script_name
+ENV SCRIPT_NAME $script_name
+
 WORKDIR /$CONTAINER_NAME
 
 RUN pip install --upgrade pip
@@ -18,4 +21,4 @@ RUN pip install --upgrade pip
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-CMD [ "python", "server.py"]
+CMD python $SCRIPT_NAME
